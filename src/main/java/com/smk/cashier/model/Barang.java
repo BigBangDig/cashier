@@ -1,8 +1,8 @@
-package model;
+package com.smk.cashier.model;
 
 public class Barang extends Model{
     private String kodeBarang;
-    private  String namaBarag;
+    private  String namaBarang;
     private  int hargaBarang;
 
     public String getKodeBarang() {
@@ -13,12 +13,12 @@ public class Barang extends Model{
         this.kodeBarang = kodeBarang;
     }
 
-    public String getNamaBarag() {
-        return namaBarag;
+    public String getNamaBarang() {
+        return namaBarang;
     }
 
-    public void setNamaBarag(String namaBarag) {
-        this.namaBarag = namaBarag;
+    public void setNamaBarang(String namaBarang) {
+        this.namaBarang = namaBarang;
     }
 
     public int getHargaBarang() {
@@ -33,7 +33,7 @@ public class Barang extends Model{
     public String toString() {
         return "Barang{" +
                 "kodeBarang='" + kodeBarang + '\'' +
-                ", namaBarag='" + namaBarag + '\'' +
+                ", namaBarag='" + namaBarang + '\'' +
                 ", hargaBarang=" + hargaBarang +
                 ", dateCreated=" + dateCreated +
                 ", lastModified=" + lastModified +
