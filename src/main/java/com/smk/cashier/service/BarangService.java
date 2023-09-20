@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 public class BarangService {
     FileReader barangServiceReader;
-    FileWriter barangServiceWrite;
+    FileWriter barangServiceWriter;
 
     List<Barang> barangList =
             new LinkedList<>();
@@ -18,7 +18,7 @@ public class BarangService {
 
     private BarangService() {
         try {
-            barangServiceWrite = new FileWriter("barang.txt");
+            barangServiceWriter = new FileWriter("barang.txt");
             barangServiceReader = new FileReader("barang.txt");
         } catch (IOException e) {
             e.printStackTrace();
@@ -44,7 +44,14 @@ public class BarangService {
     }
 
     private void writeFile() {
-        BufferedWriter bufferedWriter = new BufferedWriter(barangServiceWrite);
+
+        try {
+            barangServiceWriter = new
+                    FileWriter("barang.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        BufferedWriter bufferedWriter = new BufferedWriter(barangServiceWriter);
         for (int i = 0; i < barangList.size(); i++) {
             Barang barang = barangList.get(i);
             StringBuilder sb = new StringBuilder();
